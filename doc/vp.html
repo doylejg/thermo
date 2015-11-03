@@ -1,0 +1,451 @@
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+
+
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <meta name="Author" content="Holger Vömel, CIRES, University of Colorado at Boulder">
+   <meta name="GENERATOR" content="Mozilla/4.79 [en] (Windows NT 5.0; U) [Netscape]">
+   <title>Water Vapor Pressure Formulations</title>
+</head><body>
+<u><font face="Arial,Helvetica"><font color="#cc0000"><font size="+2">Saturation
+vapor pressure formulations</font></font></font></u>
+<p><font face="Arial,Helvetica"><font size="-1"><a href="http://cires.colorado.edu/%7Evoemel/home.html">Holger
+Vömel</a></font></font>
+<br><font face="Arial,Helvetica"><font size="-1">CIRES, University of Colorado,
+Boulder</font></font>
+<br>&nbsp;
+</p><p><font face="Arial,Helvetica">There is a large number of saturation vapor
+pressure equations used to calculate the pressure of water vapor over a
+surface of liquid water or ice. This is a brief overview of the most important
+equations used. Several useful reviews of the existing vapor pressure curves
+are listed in the references. Please note the updated discussion of the
+WMO formulation.</font>
+</p><h4>
+<font face="Arial,Helvetica">1) Vapor Pressure over liquid water below
+0°C</font></h4>
+
+<li>
+<font face="Arial,Helvetica">Goff Gratch equation</font></li>
+
+<br><font face="Arial,Helvetica"><i><font size="-1">(Smithsonian Tables,
+1984, after Goff and Gratch, 1946)</font></i>:</font>
+<ul><font face="Arial,Helvetica">Log<sub>10</sub> <i>p<sub>w</sub></i>
+=&nbsp; -7.90298 (373.16/<i>T</i>-1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[1]</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 5.02808 Log<sub>10</sub>(373.16/<i>T</i>)</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+- 1.3816 10<sup>-7 </sup>(10<sup>11.344 (1-<i>T</i>/373.16)</sup>&nbsp;
+-1)</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 8.1328 10<sup>-3 </sup>(10<sup>-3.49149 (373.16/<i>T</i>-1)&nbsp;</sup>
+-1)</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ Log<sub>10</sub>(1013.246)</font>
+<br><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>w</sub></i>
+in [hPa]</font></ul>
+
+<li>
+<font face="Arial,Helvetica">WMO</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Goff, 1957):</font></font></i>
+<ul><font face="Arial,Helvetica">Log<sub>10</sub> <i>p<sub>w</sub></i>
+=&nbsp; 10.79574 (1-273.16/<i>T</i>)<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</i>[2]</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+- 5.02800 Log<sub>10</sub>(<i>T</i>/273.16)</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 1.50475 10<sup>-4 </sup>(1 - 10<sup>(-8.2969*(<i>T</i>/273.16-1))</sup>)</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.42873 10<sup>-3 </sup>(10<sup>(+4.76955*(1-273.16/<i>T</i>)) </sup>-
+1)</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.78614</font>
+<br><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>w</sub></i>
+in [hPa]</font>
+<p><font face="Arial,Helvetica">(Note: WMO based its recommendation on
+a paper by Goff (1957), which is shown here. The recommendation published
+by WMO (1988) has several typographical errors and cannot be used. A corrigendum
+(WMO, 2000) shows the term +0.42873 10<sup>-3 </sup>(10<sup>(-4.76955*(1-273.16/<i>T</i>))
+</sup>-
+1) in the fourth line compared to the original publication by Goff (1957).
+Note the different sign of the exponent. The earlier 1984 edition shows
+the correct formula.)</font></p></ul>
+
+<li>
+<font face="Arial,Helvetica">Hyland and Wexler</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Hyland and Wexler, 1983):</font></font></i>
+<ul><font face="Arial,Helvetica">Log <i>p<sub>w</sub></i> =&nbsp; -0.58002206
+10<sup>4</sup> / <i>T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</i>[3]</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.13914993 10<sup>1</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+- 0.48640239 10<sup>-1</sup> <i>T</i></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.41764768 10<sup>-4</sup> <i>T</i><sup>2</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+- 0.14452093 10<sup>-7</sup> <i>T</i><sup>3</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.65459673 10<sup>1</sup> Log(<i>T</i>)</font>
+<br><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>w</sub></i>
+in [Pa]</font></ul>
+
+<li>
+<font face="Arial,Helvetica">Buck</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Buck Research Manual
+(1996); updated equation from Buck, A. L., New equations for computing
+vapor pressure and enhancement factor, J. Appl. Meteorol., 20, 1527-1532,
+1981)</font></font></i>
+<blockquote><i><font face="Arial,Helvetica">p<sub>w</sub></font></i><font face="Arial,Helvetica">
+= 6.1121&nbsp; e<sup>(18.678 - <i>t</i> / 234.5) <i>t</i> / (257.14 + <i>t</i>)</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+[1996]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[4]</font>
+<br><i><font face="Arial,Helvetica">p<sub>w</sub></font></i><font face="Arial,Helvetica">
+= 6.1121 e<sup>17.502 <i>t</i> / (240.97 + <i>t</i>)</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[1981]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[5]</font>
+<br><font face="Arial,Helvetica">with <i>t</i> in [°C] and <i>p<sub>w</sub></i>
+in [hPa]</font></blockquote>
+
+<li>
+<font face="Arial,Helvetica">Sonntag</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Sonntag, 1994)</font></font></i>
+<ul><font face="Arial,Helvetica">Log <i>p<sub>w</sub></i> =&nbsp; -6096.9385
+/ <i>T</i>&nbsp;<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</i>[6]</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 16.635794</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+- 2.711193 10<sup>-2</sup> * <i>T</i></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 1.673952 10<sup>-5</sup> * <i>T</i><sup>2</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 2.433502 * Log(<i>T</i>)</font>
+<br><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>w</sub></i>
+in [hPa]</font></ul>
+
+<li>
+<font face="Arial,Helvetica">Magnus Teten</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Murray, 1967)</font></font></i>
+<ul><font face="Arial,Helvetica">Log<sub>10</sub> <i>p<sub>w</sub></i>
+= 7.5 <i>t</i> / (<i>t</i>+237.3)
++
+0.7858&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[7]</font>
+<br><font face="Arial,Helvetica">with <i>t</i> in [°C] and <i>p<sub>w</sub></i>
+in [hPa]</font></ul>
+
+<li>
+<font face="Arial,Helvetica">Bolton</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Bolton, 1980)</font></font></i>
+<ul><i><font face="Arial,Helvetica">p<sub>w</sub></font></i><font face="Arial,Helvetica">
+= 6.112 e<sup>17.67 * <i>t</i> / (<i>t</i>+243.5)</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[8]</font>
+<br><font face="Arial,Helvetica">with <i>t</i> in [°C] and <i>p<sub>w</sub></i>
+in [hPa]</font></ul>
+
+<li>
+<font face="Arial,Helvetica">Murphy and Koop</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Murphy and Koop, 2005)</font></font></i>
+<ul><font face="Arial,Helvetica">Log <i>p<sub>w</sub></i> = 54.842763 -
+6763.22 / <i>T</i> - 4.21 Log(<i>T)</i>+ 0.000367
+<i>T</i></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ Tanh{0.0415 (<i>T</i> - 218.8)}</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+·&nbsp; (53.878 - 1331.22 / <i>T</i> - 9.44523 Log(<i>T</i>) + 0.014025
+<i>T</i>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[9]</font>
+<p><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>w</sub></i>
+in [Pa]</font></p></ul>
+
+<li>
+<font face="Arial,Helvetica">International Association for the Properties
+of Water and Steam (IAPWS) Formulation 1995</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Wagner and Pruß,
+2002)</font></font></i>
+<ul><font face="Arial,Helvetica">Log (<i>p<sub>w</sub>/22.064e6</i>) =
+647.096/T * ((-7.85951783 &#957;</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++
+1.84408259 &#957;<sup>1.5</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-
+11.7866497 &#957;<sup>3</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++
+22.6807411 &#957;<sup>3.5</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-
+15.9618719 &#957;<sup>4</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++
+1.80122502 &#957;<sup>7.5</sup>))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[10]</font>
+<p><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>w</sub></i>
+in [Pa] and &#957; = 1 - T/647.096</font></p></ul>
+<font face="Arial,Helvetica">At low temperatures most of these are based
+on theoretical studies and only a small number are based on actual measurements
+of the vapor pressure. The Goff Gratch equation [1] for the vapor pressure
+over liquid water covers a region of -50°C to 102°C [Gibbins 1990].
+This work is generally considered the reference equation but other equations
+are in use in the meteorological community [Elliott and Gaffen, 1993].
+There is a very limited number of measurements of the vapor pressure of
+water over supercooled liquid water at temperatures below °C. Detwiler
+[1983] claims some indirect evidence to support the extrapolation of the
+Goff-Gratch equation down to temperatures of -60°C. However, this currently
+remains an open issue.</font>
+<br><font face="Arial,Helvetica">The Hyland and Wexler formulation is used
+by Vaisala and is very similar to the formula by Sonntag (6). The Magnus
+Teten formulation [7] is widely used in Meteorology and appeals for its
+simplicity.</font>
+<br><font face="Arial,Helvetica">The comparison for the liquid saturation
+vapor pressure equations [2]-[8] with the Goff-Gratch equation [1] in figure
+1, shows that uncertainties at low temperatures become increasingly large
+and reach the measurement uncertainty claimed by some RH sensors. At -60°C
+the deviations range from -6% to +3% and at -70°C the deviations range
+from -9% to +6%. For RH values reported in the low and mid troposphere
+the influence of the saturation vapor pressure formula used is small and
+only significant for climatological studies [Elliott and Gaffen 1993].</font>
+<br><font face="Arial,Helvetica">The WMO recommended formula is a derivative
+of the Goff-Gratch equation, originally published by Goff (1957). The differences
+between Goff (1957) and Goff-Gratch (1946) are less than 1% over the entire
+temperature range. The formulation published by WMO (1988) cannot be used
+due to several typographical errors. The corrected formulation WMO (2000)
+still differs in the sign of one exponent compared to Goff (1957). This
+incorrect formulation is in closer agreement with the Hyland and Wexler
+formulation; however, it is to be assumed that Goff (1957) was to be recommended.</font>
+<p><font face="Arial,Helvetica">The most recent review of vapor pressures
+of ice and supercooled water by Murphy and Kopp (2005) provide a formulation
+[9] based on recent data on the molar heat capacity of supercooled water.
+The comparison of the the vapor pressure equations [1] - [8] with the formulation
+by Murphy and Koop [9] is shown in figure 2.</font>
+</p><p><font face="Arial,Helvetica">The study by Fukuta and Gramada [2003]
+shows direct measurements of the vapor pressure over liquid water down
+to -38°C. Their result indicates that at the lowest temperatures the
+measured vapor pressure may be as much as 10% lower than the value given
+by the Smithsonian Tables [1], and as shown in figure 1 lower as any other
+vapor pressure formulation. However, these data are in conflict with measured
+molar heat capacity data (Muprhy and Koop, 2005), which have been measured
+both for bulk as for small water droplets.</font>
+</p><p><font face="Arial,Helvetica">Like most other formulations, the IAPWS
+formulation 1995 (Wagner and Pruß, 2002) are valid only above the
+triple point. The IAWPS formulation 1995 (Wagner and Pruß, 2002)
+is valid in the temperature range 273.16 K &lt; T &lt; 647.096 K.</font>
+</p><p><font face="Arial,Helvetica">It is important to note that in the upper
+troposphere, water vapor measurements reported in the WMO convention as
+relative humidity with respect to liquid water depend critically on the
+saturation vapor pressure equation that was used to calculate the RH value.</font>
+</p><p><img src="vp_files/vapor_002.gif" width="600" height="500">
+<br><font face="Arial,Helvetica">Figure 1: Comparison of equations [2]-[10]
+with the Goff Gratch equation [1] for the saturation pressure of water
+vapor over liquid water. The measurements by Fukuta et al. [2003] are shown
+as well.</font>
+<br><font face="Arial,Helvetica"><sup>(*)</sup>WMO (2000) is also shown.
+This is based on Goff (1957) with the different sign of one exponent, likely
+due to a typographical error.</font>
+</p><h4>
+<img src="vp_files/vapor_003.gif" width="600" height="500"></h4>
+<font face="Arial,Helvetica">Figure 2: Comparison of equations [1]-[8],
+[10] with the Murphy Koop equation [9] for the saturation pressure of water
+vapor over liquid water.</font>
+<br><font face="Arial,Helvetica"><sup>(*)</sup>WMO (2000) is also shown.
+This is based on Goff (1957) with the different sign of one exponent, likely
+due to a typographical error.</font>
+<h4>
+<font face="Arial,Helvetica">2) Vapor Pressure over ice</font></h4>
+
+<li>
+<font face="Arial,Helvetica">Goff Gratch equation</font></li>
+
+<br><font face="Arial,Helvetica"><i><font size="-1">(Smithsonian Tables,
+1984)</font></i>:</font>
+<ul><font face="Arial,Helvetica">Log<sub>10</sub> <i>p<sub>i</sub></i>
+=&nbsp; -9.09718 (273.16/<i>T</i>
+-
+1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[11]</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+- 3.56654 Log<sub>10</sub>(273.16/ <i>T</i>)</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.876793 (1 - <i>T</i>/ 273.16)</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ Log<sub>10</sub>(6.1071)</font>
+<br><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>i</sub></i>
+in [hPa]</font></ul>
+
+<li>
+<font face="Arial,Helvetica">Hyland and Wexler</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Hyland and Wexler, 1983.):</font></font></i>
+<ul><font face="Arial,Helvetica">Log <i>p<sub>i</sub></i> =&nbsp; -0.56745359
+10<sup>4</sup> / <i>T</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[12]</font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.63925247 10<sup>1</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+- 0.96778430 10<sup>-2</sup> <i>T</i></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.62215701 10<sup>-6</sup> <i>T</i><sup>2</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.20747825 10<sup>-8</sup> <i>T</i><sup>3</sup></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+- 0.94840240 10<sup>-12</sup> <i>T<sup>4</sup></i></font>
+<br><font face="Arial,Helvetica">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
++ 0.41635019 10<sup>1</sup> Log(<i>T</i>)</font>
+<br><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>i</sub></i>
+in [Pa]</font></ul>
+
+<li>
+<font face="Arial,Helvetica">Magnus Teten</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Murray, 1967)</font></font></i>
+<ul><font face="Arial,Helvetica">Log<sub>10</sub> <i>p<sub>i</sub></i>
+= 9.5 <i>t</i> / (<i>t</i>+265.5)
++
+0.7858&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[13]</font>
+<br><font face="Arial,Helvetica">with <i>t</i> in [°C] and <i>p<sub>i</sub></i>
+in [hPa]</font></ul>
+
+<li>
+<font face="Arial,Helvetica">Buck</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Buck Research Manual,
+1996)</font></font></i>
+<blockquote><i><font face="Arial,Helvetica">p<sub>i</sub></font></i><font face="Arial,Helvetica">
+= 6.1115&nbsp; e<sup>(23.036 - <i>t</i> / 333.7) <i>t</i> / (279.82 + <i>t</i>)</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+[1996]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[14]</font>
+<br><i><font face="Arial,Helvetica">p<sub>i</sub></font></i><font face="Arial,Helvetica">
+= 6.1115 e<sup>22.452 <i>t</i> / (272.55+<i>t</i>)</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[1981]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[15]</font>
+<br><font face="Arial,Helvetica">with <i>t</i> in [°C] and <i>p<sub>i</sub></i>
+in [hPa]</font></blockquote>
+
+<li>
+<font face="Arial,Helvetica">Marti Mauersberger</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Marti and Mauersberger,
+1993)</font></font></i>
+<blockquote><font face="Arial,Helvetica">Log<sub>10</sub> <i>p<sub>i</sub></i>
+= -2663.5 / <i>T</i>
++
+12.537&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[16]</font>
+<br><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>i</sub></i>
+in [Pa]</font></blockquote>
+
+<li>
+<font face="Arial,Helvetica">Murphy and Koop</font></li>
+
+<br><i><font face="Arial,Helvetica"><font size="-1">(Murphy and Koop, 2005)</font></font></i>
+<blockquote><font face="Arial,Helvetica">Log <i>p<sub>i</sub></i> = 9.550426
+- 5723.265/<i>T</i> + 3.53068 Log(<i>T</i>) - 0.00728332 <i>T</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[17]</font>
+<br><font face="Arial,Helvetica">with <i>T</i> in [K] and <i>p<sub>i</sub></i>
+in [Pa]</font></blockquote>
+<font face="Arial,Helvetica">The Goff Gratch equation [11] for the vapor
+pressure over ice cover a region of -100°C to 0°C. It is generally
+considered the reference equation; however, other equations have also been
+widely used. The equations discussed here are mostly of interest for frost-point
+measurements using chilled mirror hygrometers, since these instruments
+directly measure the temperature at which a frost layer and the overlying
+vapor are in equilibrium. In meteorological practice, relative humidity
+is given over liquid water (see section 1) and care needs to be taken to
+consider this difference.</font>
+<br><font face="Arial,Helvetica">Buck Research, which manufactures frost-point
+hygrometers, uses the Buck formulations in their instruments. These formulations
+include an enhancement factor, which corrects for the differences between
+pure vapor and moist air. This enhancement factor is a weak function of
+temperature and pressure and corrects about 0.5% at sea level. For the
+current discussion it has been omitted.</font>
+<br><font face="Arial,Helvetica">The Marti Mauersberger equation is the
+only equation based on direct measurements of the vapor pressure down to
+temperatures of 170 K.</font>
+<br><font face="Arial,Helvetica">The comparison of equations 12-17 with
+the Goff Gratch equation (figure 3) shows, that with the exception of the
+Magnus Teten formula, the deviations in the typical meteorological range
+of -100°C to 0°C are less than 2.5%, and smaller than typical instrumental
+errors of frost-point hygrometers of 5-10%.</font>
+<br><font face="Arial,Helvetica">Not shown is the WMO recommended equation
+for vapor pressure over ice, since it is nearly identical with the Goff-Gratch
+equation [11].</font>
+<p><img src="vp_files/vapor.gif" width="600" height="500">
+<br><font face="Arial,Helvetica">Figure 3: Comparison of equations [12]-[17]
+with the Goff Gratch equation [11] for the saturation pressure of water
+vapor over ice.</font>
+</p><h4>
+<font face="Arial,Helvetica">3) References</font></h4>
+<font face="Arial,Helvetica"><font size="-1">Bolton, D., The computation
+of equivalent potential temperature, Monthly Weather Review, 108, 1046-1053,
+1980..</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Buck, A. L., New equations
+for computing vapor pressure and enhancement factor, J. Appl. Meteorol.,
+20, 1527-1532, 1981.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Buck Research Manuals, 1996</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Detwiler, A., Extrapolation
+of the Goff-Gratch formula for vapor pressure over liquid water at temperatures
+below 0°C, J. Appl. Meteorol., 22, 503, 1983.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Elliott, W. P. and D. J.
+Gaffen, On the utility of radiosonde humidity archives for climate studies,
+Bull. Am. Meteorol. Soc., 72, 1507-1520, 1991.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Elliott, W. P. and D. J.
+Gaffen, Effects of conversion algorithms on reported upper air dewpoint
+depressions, Bull. Am. Meteorol. Soc., 74, 1323-1325, 1993.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Fukuta, N. and C. M. Gramada,
+Vapor pressure measurement of supercooled water, J. Atmos. Sci., 60, 1871-1875,
+2003.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Gibbins, C. J., A survey
+and comparison of relationships for the determination of the saturation
+vapour pressure over plane surfaces of pure water and of pure ice, Annales
+Geophys., 8, 859-886, 1990.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Goff, J. A., and S. Gratch,
+Low-pressure properties of water from -160 to 212 F, in Transactions of
+the American society of heating and ventilating engineers, pp 95-122, presented
+at the 52nd annual meeting of the American society of heating and ventilating
+engineers, New York, 1946.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Goff, J. A. Saturation pressure
+of water on the new Kelvin temperature scale, Transactions of the American
+society of heating and ventilating engineers, pp 347-354, presented at
+the semi-annual meeting of the American society of heating and ventilating
+engineers, Murray Bay, Que. Canada, 1957.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Hyland, R. W. and A. Wexler,
+Formulations for the Thermodynamic Properties of the saturated Phases of
+H2O from 173.15K to 473.15K, ASHRAE Trans, 89(2A), 500-519, 1983.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Marti, J. and K Mauersberger,
+A survey and new measurements of ice vapor pressure at temperatures between
+170 and 250 K, GRL 20, 363-366, 1993</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Murphy, D. M. and T. Koop,
+Review of the vapour pressures of ice and supercooled water for atmospheric
+applications, Quart. J. Royal Met. Soc, 131, 1539-1565, 2005.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Murray, F. W., On the computation
+of saturation vapor pressure, J. Appl. Meteorol., 6, 203-204, 1967.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Smithsonian Met. Tables,&nbsp;
+5th ed., pp. 350, 1984.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Sonntag, D., Advancements
+in the field of hygrometry, Meteorol. Z., N. F., 3, 51-66, 1994.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">Wagner W. and A. Pruß,
+The IAPWS formulation 1995 for the thermodynamic properties of ordinary
+water substance for general and scientific use, J. Phys. Chem. Ref. Data,
+31, 387-535, 2002.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">World Meteorological Organization,
+General meteorological standards and recommended practices, Appendix A,
+WMO Technical Regulations, WMO-No. 49, 1988.</font></font>
+<br><font face="Arial,Helvetica"><font size="-1">World Meteorological Organization,
+General meteorological standards and recommended practices, Appendix A,
+WMO Technical Regulations, WMO-No. 49, corrigendum, August 2000.</font></font>
+<p><font face="Arial,Helvetica"><font size="-1"><a href="http://cires.colorado.edu/%7Evoemel/vp.pro">IDL source
+for all equations</a></font></font>
+</p><p>27 November 2006
+<br><font face="Arial,Helvetica"><font size="-1"><a href="mailto://Holger.Voemel@Colorado.edu">Holger.Voemel@Colorado.edu</a></font></font>
+</p></body></html>
