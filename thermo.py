@@ -232,7 +232,7 @@ def _nv_r_p_T_Td(r,p,T,Td):
     (fractional percent), pressure p (hPa) tempearture T (K) and dewpoint
     temperature T (K)"""
     if r>1:
-        print "Warning relative humidity is greater than 100% (%.3f)"%r
+        print("Warning relative humidity is greater than 100% (%.3f)"%r)
         exit()
     _p = p*100. # hPa -> Pa
     return r*_p*es(Td)/(es(Td)*(r-1)+_p)/kb/T
@@ -255,7 +255,7 @@ def watervapour_number_density(T=None,Td=None,dens=None,p=None,w=None,r=None,
         msg = "Not enough parameters given, you provided:\n"\
               +"T: %s, Td: %s, dens: %s, p: %s, \nw: %s, r: %s, RH: %s" % \
               (T,Td,dens,p,w,r,RH)
-        raise ValueError,msg
+        raise ValueError(msg)
         
 # Wrap watervapour number density
 nv = watervapour_number_density
