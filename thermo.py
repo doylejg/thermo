@@ -38,6 +38,7 @@ DESCRIPTION
    
 """
 import numpy
+import scipy.optimize
 
 # Physical constants
 Rd = 287.04  # Dry gas constant (J/kg/K)
@@ -395,7 +396,7 @@ def moist_adiabat(T0,p,Tf):
     return T
 
 
-def const_ws_isolpleth(ws,p):
+def const_ws_isopleth(ws,p):
     """Returns tems (K) at pres p (hPa) for saturation mixing ratio ws (g/kg).
 
     The pressures should be ordered from high to low
@@ -437,12 +438,13 @@ def get_plcl(p,T,dewpoint):
         # see where they cross
         x1 = dry_adiabat(T[i],p[i:])
         ws = mixing_ratio(p[i],dewpoint[i])
-        x2 = const_ws_isolpleth(ws,p[i:])
+        x2 = const_ws_isopleth(ws,p[i:])
         d = x2-x1 # Difference
         assert( ((d[1:]-d[:-1])>0.).all() )        
         # Crossing pressure of x1 and x2
-        px = 10**numlib.lininterp2(d,numpy.log10(p[i:]),0.) 
-        Tx = numlib.lininterp2(d,x1,0.) # Crossing temperature
+        #px = 10**numlib.lininterp2(d,numpy.log10(p[i:]),0.) 
+        px = 10**numpy.interp(0.,d,numpy.log10(p[i:])) 
+        Tx = numpy.interp(0.,d,x1) # Crossing temperature
 
         # Get the moist adiabat extending from crossing pressure 
         # and temperature
@@ -507,7 +509,7 @@ def plot_skewTlogp(title,p,z,T,dewpoint,pmin=None,pmax=None,
     # Get the lifting condensation level parameters
     p0,plcl = get_plcl(p,T+273.15,dewpoint+273.15)
     i0,ilcl = arrayutils.get_indices(-p,-p0,-plcl)
-    zlcl = numlib.lininterp2(-numpy.log10(p),z,-numpy.log10(plcl))
+    zlcl = numpy.interp(-numpy.log10(plcl),-numpy.log10(p),z)
 
     T0range = T0max-T0min # Surface temperature range (C)
     Tmax = 50.   # Maximum temperature (C)
@@ -596,7 +598,7 @@ def plot_skewTlogp(title,p,z,T,dewpoint,pmin=None,pmax=None,
     for ws in [3.e-7,1.e-6,3.e-6,1.e-5,3.e-5,0.0001,0.0003,0.001,0.003,0.01,
                0.03,0.1,0.3,1.,2.5,5.,10.,15.,25.]:
              
-        Tws = const_ws_isolpleth(ws,p)-273.15
+        Tws = const_ws_isopleth(ws,p)-273.15
         pylab.semilogy(Tws+skew(z), p, linestyle='--',
                        color=rgbcolors.get_color('red'))
 
@@ -619,7 +621,7 @@ def plot_skewTlogp(title,p,z,T,dewpoint,pmin=None,pmax=None,
 
     # Constant ws isopleth to lifting condensation level
     ws = mixing_ratio(p[i0],dewpoint[i0]+273.15)
-    Tws_lcl = const_ws_isolpleth(ws,plower)-273.15
+    Tws_lcl = const_ws_isopleth(ws,plower)-273.15
     pylab.semilogy(Tws_lcl+skew(zlower)[i0:ilcl+1], plower, linewidth=2,
                    color=rgbcolors.get_color('red'))
 
