@@ -1,10 +1,14 @@
 #! /usr/bin/env python
 """thermo.py
 
-   Copyright (C) 2009 Jonathan Doyle
+   Copyright (C) 2019 Jonathan Doyle, Tom Duck
    All rights reserved.
    
-   Jonathan G. Doyle <doylejg@dal.ca>
+   Jonathan G. Doyle <jonathan.g.doyle@gmail.com>
+   Researcher, Applied Research & Innovation at Selkirk College
+   Selkirk College, West Kootenay & Boundary Region, BC
+   
+   Thomas J. Duck <tom.duck@dal.ca>
    Department of Physics and Atmospheric Science,
    Dalhousie University, Halifax, Nova Scotia, Canada, B3H 3J5
 
